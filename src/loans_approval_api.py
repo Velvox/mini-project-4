@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 
 import requests
 import pandas as pd
-import numpy
+import numpy as np
 import pickle
 
 app = Flask(__name__)
@@ -46,9 +46,10 @@ class Loans(Resource):
         df = pd.DataFrame(json_data.values(), index=json_data.keys()).transpose()
         # getting predictions from our model.
         # it is much simpler because we used pipelines during development
-        res = model.predict_proba(df)
+        res = model.predict(df)
         # we cannot send numpt array as a result
-        return res.tolist()
+        # return res.tolist()
+        return json_data
 
 # assign endpoint
 api.add_resource(Loans, '/loans')
