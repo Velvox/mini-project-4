@@ -16,17 +16,21 @@
 1. Genders are skewed heavily male
 2. Substantial outliers for income and loanamount, apply log transformation
 
-Applicant Income           |  Solarized Ocean
+Applicant Income           |  Loan Amount
 :-------------------------:|:-------------------------:
 ![Outliers](images/Applicantbox.png)  |  ![LoanAmount](images/LoanAmountHist.png)
 
-3. Education and marital status is strongly correlated with income
-![Income](images/)
-4. Credit History is strongly correlated with approval
+3. Education and marital status is correlated with income
+Education       |  Marital Status
+:-------------------------:|:-------------------------:
+![Education](images/IncomeEducation.png)  |  ![Married](images/IncomeMaritalStatus.png)
 
+4. Credit History is strongly correlated with approval
+![Credit](images/CreditHistoryPlot.png)
 
 
 ## Process
+![Process](images/process.png)
 1. EDA with plots, checking distributions, unique value counts, and more.
 2. Merge incomes into total income, and apply log transformation to income and LoanAmount.
 3. Onehot encode categorical variables and scale numerical variables.
