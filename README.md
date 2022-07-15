@@ -8,11 +8,13 @@
 
 ## Hypothesis
 1. Gender has no bearing on approval rate.
-2. Marital status will have an impact on approval status
+2. Marital status and education will be an indicator of income
 3. If loan amount exceeds income over the loan term, should be low approval
+5. Credit history will be correlated with approval
 
 ## EDA 
 1. Substantial outliers for income and loanamount, apply log transformation
+![Outliers](images/Applicantbox.png)
 2. Genders are skewed heavily male
 3. Most applicants are approved.
 4. Strong correlation between education and income
@@ -20,16 +22,25 @@
 
 
 ## Process
-1. EDA with histograms, checking distributions, unique value counts, and more.
+1. EDA with plots, checking distributions, unique value counts, and more.
 2. Merge incomes into total income, and apply log transformation to income and LoanAmount.
 3. Onehot encode categorical variables and scale numerical variables.
 4. Apply PCA and Select K best to find the best features.
-5. Use a pipeline and grid search to find the best features, hyperparameters and classifier for the problem.
-6. Export the model with pickle, use Flask to make an app and deploy on AWS.
+5. Build entirely within a pipeline
+6. Grid search to find the best features, hyperparameters and classifier for the problem.
+7. Export the model with pickle, use Flask to make an app and deploy on AWS.
 
 ## Results/Demo
+
+![api_demo](images/Screen_Recording_2022-07-15_at_11_04_57_AM_AdobeExpress.gif)
+
 Best test set accuracy: 0.8617886178861789
-Achieved with hyperparameters: {'classifier': SVC(C=0.5), 'classifier__C': 0.5, 'preprocessing__cat_transform__pca__n_components': 2, 'preprocessing__num_transform__scaling': StandardScaler(), 'preprocessing__num_transform__select_best__k': 1}
+Achieved with hyperparameters: 
+* 'classifier': SVC(C=0.5, kernel=linear)
+* PCA Components: 2
+* SelectKBest: 1
+* Scaling: Standard Scaler
+
 
 ## Challanges 
 -Using a full pipeline was challenging but helped me learn best practices for the future.
@@ -38,4 +49,5 @@ Achieved with hyperparameters: {'classifier': SVC(C=0.5), 'classifier__C': 0.5, 
 -Using the incorrect environment caused errors that took hours to solve
 
 ## Future Goals
--Clean formatting for the API
+-Clean formatting for the API, maybe add more functionality / an HTML gui
+- 
