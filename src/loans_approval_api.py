@@ -9,6 +9,36 @@ import pickle
 app = Flask(__name__)
 api = Api(app)
 
+def totalIncome(X):
+    applicant_income = X['ApplicantIncome']
+    coapp_income = X['CoapplicantIncome']
+    X = X.copy()
+    X['total_income'] = applicant_income + coapp_income
+    return X
+
+def dropIncome(X):
+    return X.drop(['ApplicantIncome', 'CoapplicantIncome'], axis=1)
+
+class applyLog():
+    def __init__(self, log_col):
+        self.log_col = log_col
+
+    def fit(self, X, y = None):
+        return self
+
+    def transform(self, X, y = None):
+    
+        X = X.copy()
+        X[self.log_col] = np.log(X[self.log_col])
+
+        return X
+
+def convertString(data):
+    string_data = data.astype(str)
+    return string_data
+
+# total_income_transformer = FunctionTransformer(totalIncome)
+
 class RawFeats:
     def __init__(self, feats):
         self.feats = feats
@@ -23,7 +53,7 @@ class RawFeats:
         self.fit(X)
         return self.transform(X)
 
-model = pickle.load( open( "loans_approval_model.sav", "rb" ) )
+model = pickle.load(open( "loans_approval_model.sav", "rb" ))
 
 class Scoring(Resource):
     def post(self):
