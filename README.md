@@ -8,7 +8,7 @@
 
 ## Hypothesis
 1. Gender has no bearing on approval rate.
-2. Marital status will have an impact on marital status
+2. Marital status will have an impact on approval status
 3. If loan amount exceeds income over the loan term, should be low approval
 
 ## EDA 
