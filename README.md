@@ -13,12 +13,17 @@
 5. Credit history will be correlated with approval
 
 ## EDA 
-1. Substantial outliers for income and loanamount, apply log transformation
-![Outliers](images/Applicantbox.png)
-2. Genders are skewed heavily male
-3. Most applicants are approved.
-4. Strong correlation between education and income
-5. Higher the income, the better the approval rate.
+1. Genders are skewed heavily male
+2. Substantial outliers for income and loanamount, apply log transformation
+
+Applicant Income           |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Outliers](images/Applicantbox.png)  |  ![LoanAmount](images/LoanAmountHist.png)
+
+3. Education and marital status is strongly correlated with income
+![Income](images/)
+4. Credit History is strongly correlated with approval
+
 
 
 ## Process
@@ -34,7 +39,7 @@
 
 ![api_demo](images/Screen_Recording_2022-07-15_at_11_04_57_AM_AdobeExpress.gif)
 
-Best test set accuracy: 0.8617886178861789
+Best test set accuracy: 0.86
 Achieved with hyperparameters: 
 * 'classifier': SVC(C=0.5, kernel=linear)
 * PCA Components: 2
