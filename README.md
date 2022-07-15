@@ -37,6 +37,7 @@ Api is faulty due to log transformation and type handling
 -Using a full pipeline was challenging but helped me learn best practices for the future.
 -Learning to properly apply and sequence transformers for the use-case took quite a bit of time.
 -Troubleshooting the API is very time-consuming. Difficult to troubleshoot each step.
+-Using the incorrect environment caused errors that took hours to solve
 
 ## Future Goals
--Fix issues with the API
+-Clean formatting for the API
