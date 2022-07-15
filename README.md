@@ -21,6 +21,7 @@ Applicant Income           |  Loan Amount
 ![Outliers](images/Applicantbox.png)  |  ![LoanAmount](images/LoanAmountHist.png)
 
 3. Education and marital status is correlated with income
+
 Education                  |  Marital Status
 :-------------------------:|:-------------------------:
 ![Education](images/IncomeEducation.png)  |  ![Married](images/IncomeMaritalStatus.png)
