@@ -31,8 +31,6 @@
 Best test set accuracy: 0.8617886178861789
 Achieved with hyperparameters: {'classifier': SVC(C=0.5), 'classifier__C': 0.5, 'preprocessing__cat_transform__pca__n_components': 2, 'preprocessing__num_transform__scaling': StandardScaler(), 'preprocessing__num_transform__select_best__k': 1}
 
-Api is faulty due to log transformation and type handling
-
 ## Challanges 
 -Using a full pipeline was challenging but helped me learn best practices for the future.
 -Learning to properly apply and sequence transformers for the use-case took quite a bit of time.
