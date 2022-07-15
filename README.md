@@ -55,8 +55,8 @@ Achieved with hyperparameters:
 ## Challanges 
 * Troubleshooting in a pipeline and app proved difficult, but it has helped me learn best practices for the future.
 * Learning to properly apply and sequence transformers in a pipeline for the use-case took quite a bit of time.
-* I spent a few hours troubleshooting the api, that was bugged due to a versionning issue from using the wrong environment. :(
-* Adding files to the AWS EC2 was suprisingly difficult, I ended up using filezilla for ease of use.
+* I spent a few hours troubleshooting the api, that was bugged due to a versioning issue from using the wrong environment. :(
+* Adding files to the AWS EC2 was surprisingly difficult, I ended up using filezilla for ease of use.
 
 ## Future Goals
 * Clean formatting for the API, maybe add more functionality / an HTML gui
