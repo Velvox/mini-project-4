@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_restful import Resource, Api, reqparse
 
 import requests
@@ -37,25 +37,10 @@ def convertString(data):
     string_data = data.astype(str)
     return string_data
 
-# total_income_transformer = FunctionTransformer(totalIncome)
-
-class RawFeats:
-    def __init__(self, feats):
-        self.feats = feats
-
-    def fit(self, X, y=None):
-        pass
-
-    def transform(self, X, y=None):
-        return X[self.feats]
-
-    def fit_transform(self, X, y=None):
-        self.fit(X)
-        return self.transform(X)
 
 model = pickle.load(open( "loans_approval_model.sav", "rb" ))
 
-class Scoring(Resource):
+class Loans(Resource):
     def post(self):
         json_data = request.get_json()
         df = pd.DataFrame(json_data.values(), index=json_data.keys()).transpose()
@@ -66,7 +51,7 @@ class Scoring(Resource):
         return res.tolist()
 
 # assign endpoint
-api.add_resource(Scoring, '/loans')
+api.add_resource(Loans, '/loans')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5050)
