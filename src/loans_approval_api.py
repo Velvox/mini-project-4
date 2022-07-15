@@ -8,7 +8,6 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.impute import SimpleImputer
 from sklearn.decomposition import PCA
 
-import requests
 import pandas as pd
 import numpy as np
 import pickle
