@@ -53,11 +53,10 @@ Achieved with hyperparameters:
 
 
 ## Challanges 
--Using a full pipeline was challenging but helped me learn best practices for the future.
--Learning to properly apply and sequence transformers for the use-case took quite a bit of time.
--Troubleshooting the API is very time-consuming. Difficult to troubleshoot each step.
--Using the incorrect environment caused errors that took hours to solve
+* Troubleshooting in a pipeline and app is much more difficult but helped me learn best practices for the future.
+* Learning to properly apply and sequence transformers in a pipeline for the use-case took quite a bit of time.
+* I spent a few hours troubleshooting the api, that was bugged due to a versionning issue from using the wrong environment. :(
 
 ## Future Goals
--Clean formatting for the API, maybe add more functionality / an HTML gui
-- 
+* Clean formatting for the API, maybe add more functionality / an HTML gui
+* Spend more time on EDA and understanding the features selected from GridSearch. Explore more chart types
