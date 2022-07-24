@@ -27,6 +27,7 @@ Education                  |  Marital Status
 ![Education](images/IncomeEducation.png)  |  ![Married](images/IncomeMaritalStatus.png)
 
 4. Credit History is strongly correlated with approval
+
 ![Credit](images/CreditHistoryPlot.png)
 
 
