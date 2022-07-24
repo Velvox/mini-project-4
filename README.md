@@ -45,6 +45,7 @@ Education                  |  Marital Status
 ![api_demo](images/Screen_Recording_2022-07-15_at_11_04_57_AM_AdobeExpress.gif)
 
 Best test set accuracy: 0.86
+Best test set balanced accuracy (for recall): 0.75
 Achieved with hyperparameters: 
 * 'classifier': SVC(C=0.5, kernel=linear)
 * PCA Components: 2
